@@ -9,9 +9,10 @@ function resolve(dir) {
 }
 
 module.exports = {
-  entry: {
-    app: './src/main.js'
-  },
+  // entry: {
+  //   app: './src/main.js'
+  // },
+  entry: utils.entries(),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -29,6 +30,8 @@ module.exports = {
       'components':resolve('src/components'),
       'i18n':resolve('src/i18n'),
       'app':resolve('src/app'),
+      'router':resolve('src/router'),
+      'store':resolve('src/store'),
       'containers':resolve('src/containers')
     }
   },
