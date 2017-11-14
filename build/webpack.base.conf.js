@@ -28,7 +28,8 @@ module.exports = {
       'common':resolve('src/common'),
       'components':resolve('src/components'),
       'i18n':resolve('src/i18n'),
-      'app':resolve('src/app')
+      'app':resolve('src/app'),
+      'containers':resolve('src/containers')
     }
   },
   module: {

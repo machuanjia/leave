@@ -2,10 +2,6 @@
 require('./check-versions')()
 
 const config = require('../config')
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
-}
-
 const opn = require('opn')
 const path = require('path')
 const express = require('express')
@@ -13,12 +9,8 @@ const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = require('./webpack.dev.conf')
 
-// default port where dev server listens for incoming traffic
 const port = process.env.PORT || config.build.port
-// automatically open browser, if not set will be false
 const autoOpenBrowser = !!config.dev.autoOpenBrowser
-// Define HTTP proxies to your custom API backend
-// https://github.com/chimurai/http-proxy-middleware
 const proxyTable = config.dev.proxyTable
 
 const app = express()
@@ -79,7 +71,7 @@ var server
 var portfinder = require('portfinder')
 portfinder.basePort = port
 
-console.log('> Starting prod server...')
+console.log('> Starting prod server 9000...')
 devMiddleware.waitUntilValid(() => {
   portfinder.getPort((err, port) => {
     if (err) {

@@ -6,6 +6,8 @@ import ElementUI from 'element-ui'
 import moment from 'moment'
 import lodash from 'lodash'
 import VueLazyload from 'vue-lazyload'
+import store from './store'
+
 import 'common/scss/style.scss'
 
 Vue.config.productionTip = false
@@ -20,9 +22,10 @@ Vue.use(ElementUI)
 Vue.use(VueLazyload)
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App },
-  i18n
+    el: '#app',
+    router,
+    store,
+    template: '<App/>',
+    components: {App},
+    i18n
 })
