@@ -27,12 +27,8 @@ module.exports = {
       '@': resolve('src'),
       'api':resolve('src/api'),
       'common':resolve('src/common'),
-      'components':resolve('src/components'),
       'i18n':resolve('src/i18n'),
-      'app':resolve('src/app'),
-      'router':resolve('src/router'),
-      'store':resolve('src/store'),
-      'containers':resolve('src/containers')
+      'app':resolve('src/app')
     }
   },
   module: {
