@@ -7,6 +7,7 @@ Vue.use(Router)
 const Dashboard = () => import ('app/views/dashboard/dashboard')
 
 export default new Router({
+    mode: 'history',
     routes: [
         {
             path: '/',
