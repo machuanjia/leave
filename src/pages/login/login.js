@@ -1,12 +1,10 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from 'app/router'
+import Login from 'site/views/login/Login.vue'
 import i18n from 'i18n'
 import ElementUI from 'element-ui'
 import moment from 'moment'
 import lodash from 'lodash'
 import VueLazyload from 'vue-lazyload'
-import store from 'app/store'
 
 import 'common/scss/style.scss'
 
@@ -22,10 +20,8 @@ Vue.use(ElementUI)
 Vue.use(VueLazyload)
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    store,
-    template: '<App/>',
-    components: {App},
+    el: '#login',
+    template: '<Login/>',
+    components: {Login},
     i18n
 })

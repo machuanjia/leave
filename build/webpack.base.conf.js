@@ -28,7 +28,8 @@ module.exports = {
       'api':resolve('src/api'),
       'common':resolve('src/common'),
       'i18n':resolve('src/i18n'),
-      'app':resolve('src/app')
+      'app':resolve('src/app'),
+      'site':resolve('src/site')
     }
   },
   module: {
