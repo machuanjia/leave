@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Login from 'site/views/login/Login.vue'
+import Login from './Login.vue'
 import i18n from 'i18n'
 import ElementUI from 'element-ui'
 import moment from 'moment'
