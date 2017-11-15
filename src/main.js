@@ -8,7 +8,7 @@ import lodash from 'lodash'
 import VueLazyload from 'vue-lazyload'
 import store from 'store'
 
-import 'common/scss/style.scss'
+import 'assets/scss/style.scss'
 
 Vue.config.productionTip = false
 
