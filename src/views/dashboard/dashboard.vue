@@ -1,8 +1,5 @@
 <template>
- <el-container>
-  <el-header>Header</el-header>
-  <el-main>dashboard</el-main>
-</el-container>
+ <div>main</div>
 </template>
 
 <script>
@@ -18,11 +15,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .el-header,
-  .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-  }
+
 </style>
