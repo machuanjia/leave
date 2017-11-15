@@ -9,10 +9,10 @@ function resolve(dir) {
 }
 
 module.exports = {
-  // entry: {
-  //   app: './src/main.js'
-  // },
-  entry: utils.entries(),
+  entry: {
+    app: './src/main.js'
+  },
+  // entry: utils.entries(),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -28,8 +28,11 @@ module.exports = {
       'api':resolve('src/api'),
       'common':resolve('src/common'),
       'i18n':resolve('src/i18n'),
-      'app':resolve('src/app'),
-      'site':resolve('src/site')
+      'components':resolve('src/components'),
+      'store':resolve('src/store'),
+      'layout':resolve('src/layout'),
+      'router':resolve('src/router'),
+      'views':resolve('src/views')
     }
   },
   module: {

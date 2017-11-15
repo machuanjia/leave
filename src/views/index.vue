@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import AppHeader from 'app/components/header'
+import AppHeader from 'components/header'
 
 export default {
-  name: 'full',
+  name: 'layout',
   components: {
       AppHeader
   }

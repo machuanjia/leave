@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from 'app/router'
+import router from 'router'
 import i18n from 'i18n'
 import ElementUI from 'element-ui'
 import moment from 'moment'
 import lodash from 'lodash'
 import VueLazyload from 'vue-lazyload'
-import store from 'app/store'
+import store from 'store'
 
 import 'common/scss/style.scss'
 
