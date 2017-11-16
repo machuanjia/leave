@@ -41,3 +41,11 @@ export default [{
 }]
 
 ```
+
+```
+ this.$$api.user_login({
+              data: {},
+              fn: (data) => {},
+              errFn: (err) => {}
+ })
+```
