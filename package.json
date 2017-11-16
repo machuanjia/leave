@@ -23,6 +23,7 @@
     "moment": "^2.19.1",
     "timma-flex": "^1.0.0",
     "vue": "^2.5.2",
+    "vue-axios": "^2.0.2",
     "vue-i18n": "^7.3.2",
     "vue-lazyload": "^1.1.4",
     "vue-router": "^3.0.1",

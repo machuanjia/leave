@@ -32,7 +32,9 @@ module.exports = {
       'store':resolve('src/store'),
       'layout':resolve('src/layout'),
       'router':resolve('src/router'),
-      'views':resolve('src/views')
+      'views':resolve('src/views'),
+      'apis':resolve('src/apis'),
+      'config':resolve('src/config')
     }
   },
   module: {
