@@ -19,7 +19,7 @@ npm run build --report
 
 ## 开发注意
 
-api的正确添加方法 : apis下有对应的模块文件，在文件export对象中 添加你的api ，如果是新的模块，需要自行添加模块文件夹，并且在apis/index.js中export ，所有的对应的api都会注入到 全局Vue $$api对象中。调用方法 ： this.$api.api_name （api_name生成规则是 module_method）
+api的正确添加方法 : apis下有对应的模块文件，在文件export对象中 添加你的api ，如果是新的模块，需要自行添加模块文件夹，并且在 `apis/index.js`中export ，所有的对应的api都会注入到 全局Vue $$api 对象中。调用方法 ： `this.$api.api_name` （`api_name生成规则是 module_method`）
 
 ` /apis/user/index.js `
 ```
