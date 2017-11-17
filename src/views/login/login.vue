@@ -88,7 +88,8 @@
             this.$$api.user_login({
               data: this.form,
               fn: (data) => {
-                console.log('登录成功' + data);
+                console.log(data);
+                console.log('登录成功');
               },
               errFn: (err) => {
                 this.$message.error(err.msg)
