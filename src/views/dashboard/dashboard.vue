@@ -1,19 +1,19 @@
 <template>
- <div >dashboard</div>
+  <div>
+    <h1>Shopping Cart Example</h1>
+    <hr>
+    <h2>Products</h2>
+    <product-list></product-list>
+    <hr>
+    <cart></cart>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'home',
-  data () {
-    return {
-    }
-  },
-  methods: {
+  import ProductList from './ProductList.vue'
+  import Cart from './Cart.vue'
+
+  export default {
+    components: { ProductList, Cart }
   }
-}
 </script>
-
-<style lang="scss">
-
-</style>

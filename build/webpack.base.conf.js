@@ -34,7 +34,8 @@ module.exports = {
       'router':resolve('src/router'),
       'views':resolve('src/views'),
       'apis':resolve('src/apis'),
-      'config':resolve('src/config')
+      'config':resolve('src/config'),
+      'plugins':resolve('srv/plugins')
     }
   },
   module: {
