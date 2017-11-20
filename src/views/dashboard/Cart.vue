@@ -11,13 +11,13 @@
           </el-col>
 
           <el-col :span="6">
-            {{ p.price | currency }} x {{ p.quantity }}
+            {{ p.price }} x {{ p.quantity }}
           </el-col>
         </el-row>
 
       </li>
     </ul>
-    <p>Total: {{ total | currency }}</p>
+    <p>Total: {{ total }}</p>
     <p>
       <el-button :disabled="!products.length" @click="checkout(products)">Checkout</el-button>
     </p>

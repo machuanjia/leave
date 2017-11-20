@@ -8,7 +8,7 @@
           <div class="grid-content bg-purple">{{ p.title }} </div>
         </el-col>
         <el-col :span="4">
-          <div class="grid-content bg-purple-light">{{ p.price | currency }}</div>
+          <div class="grid-content bg-purple-light">{{ p.price }}</div>
         </el-col>
         <el-col :span="4">
           <div class="grid-content bg-purple-light">
