@@ -90,6 +90,9 @@
               fn: (data) => {
                 console.log(data);
                 console.log('登录成功');
+                this.$router.push({
+                  path: `/dashboard`
+                });
               },
               errFn: (err) => {
                 this.$message.error(err.msg)

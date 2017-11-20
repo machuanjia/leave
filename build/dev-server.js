@@ -23,6 +23,8 @@ const proxyTable = config.dev.proxyTable
 
 const app = express()
 const compiler = webpack(webpackConfig)
+var router = require('../server');
+router(app);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,

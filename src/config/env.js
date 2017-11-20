@@ -3,18 +3,17 @@
  *
  * baseUrl: api地址
  * imgBaseUrl: img地址
- * 
+ *
  */
 
-let baseUrl = ''; 
+let baseUrl = '';
 let imgBaseUrl = 'http://images.cangdu.org/';
 
-
-if (process.env.NODE_ENV == 'development') {
-
-}else if(process.env.NODE_ENV == 'production'){
-
-}
+// if (process.env.NODE_ENV == 'development') {
+//
+// }else if(process.env.NODE_ENV == 'production'){
+//
+// }
 
 export {
 	baseUrl,
