@@ -47,7 +47,7 @@ function ajax({
 
   // 发送请求
   Vue.axios(options).then((res) => {
-    if (res.data['status'] === 200) {
+    if (res.data['code'] === 200) {
       if (res.data['data']) {
         fn(res.data['data'])
       } else {

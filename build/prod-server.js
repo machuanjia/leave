@@ -16,6 +16,9 @@ const proxyTable = config.dev.proxyTable
 const app = express()
 const compiler = webpack(webpackConfig)
 
+var router = require('../server');
+router(app);
+
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
   quiet: true
@@ -55,8 +58,12 @@ app.use(require('connect-history-api-fallback')())
 app.use(devMiddleware)
 
 // serve pure static assets
-const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.use(staticPath, express.static('./dist'))
+// const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+// app.use(staticPath, express.static('./dist'))
+
+
+app.use(express.static(path.join(__dirname, 'dist')));
+
 
 const uri = 'http://localhost:' + port
 
