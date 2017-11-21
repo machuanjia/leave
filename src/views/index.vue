@@ -2,7 +2,9 @@
     <el-container class="app-container">
         <app-nav></app-nav>
         <el-container class="main">
-            <el-header class="main-header"></el-header>
+            <el-header class="main-header">
+                <app-header></app-header>
+            </el-header>
             <el-main class="main-body">
                 <router-view></router-view>
             </el-main>

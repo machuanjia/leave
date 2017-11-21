@@ -8,23 +8,24 @@ Vue.use(Router)
 
 const Dashboard = () => import ('views/dashboard/dashboard')
 
+const DemoList = ()=> import ('views/demo/list')
+
 export default new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
       component: Layout,
-      // beforeEnter: (to, from, next) => {
-          // next({
-          //     path: '/login'
-          // })
-      // },
       redirect: '/dashboard',
       name: 'home',
       children: [{
         path: 'dashboard',
         name: 'dashboard',
         component: Dashboard
+      },{
+        path:'demo',
+        name:'demo',
+        component:DemoList
       }]
     }, {
       path: '/login',

@@ -21,10 +21,7 @@ new Vue({
   components: {App},
   i18n,
     beforeCreate: function () {
-        window.global = {
-          locale : 'en-us'
-        }
-        console.log(window.global.locale)
+        this.$i18n.locale = 'en-us'
     },
     created: function () {
         console.log('调用了created钩子函数')
