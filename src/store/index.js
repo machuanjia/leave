@@ -5,6 +5,7 @@ import * as getters from './getters'
 import cart from './modules/cart'
 import products from './modules/products'
 import createLogger from 'vuex/dist/logger'
+import localeI18n from './modules/i18n'
 
 Vue.use(Vuex)
 
@@ -15,7 +16,8 @@ export default new Vuex.Store({
   getters,
   modules: {
     cart,
-    products
+    products,
+    localeI18n
   },
   strict: debug,
   plugins: debug ? [createLogger()] : []

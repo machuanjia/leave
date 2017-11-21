@@ -53,4 +53,3 @@ export const validator = {
     return /^[a-zA-Z0-9_-]{6,16}$/.test(value);
   }
 }
-

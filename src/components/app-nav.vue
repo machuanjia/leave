@@ -1,6 +1,7 @@
 <template>
     <el-aside width="200px" class="nav-container">
         <el-header class="nav-header">
+            LOGO
         </el-header>
         <el-main class="nav-body">
             <el-menu background-color="#2f323a"

@@ -17,7 +17,16 @@ const actions = {
     shop.getProducts(products => {
       commit(types.RECEIVE_PRODUCTS, { products })
     })
-  }
+  },
+    addToCart({ commit }, product){
+    debugger
+        if (product.inventory > 0) {
+            commit(types.ADD_TO_CART, {
+                id: product.id
+            })
+        }
+    }
+
 }
 
 // mutations
