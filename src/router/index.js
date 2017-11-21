@@ -14,6 +14,11 @@ export default new Router({
     {
       path: '/',
       component: Layout,
+      // beforeEnter: (to, from, next) => {
+          // next({
+          //     path: '/login'
+          // })
+      // },
       redirect: '/dashboard',
       name: 'home',
       children: [{

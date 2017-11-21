@@ -19,5 +19,20 @@ new Vue({
   store,
   template: '<App/>',
   components: {App},
-  i18n
+  i18n,
+    beforeCreate: function () {
+        window.global = {
+          locale : 'en-us'
+        }
+        console.log(window.global.locale)
+    },
+    created: function () {
+        console.log('调用了created钩子函数')
+    },
+    beforeMount: function () {
+        console.log('调用了beforeMount钩子函数')
+    },
+    mounted: function () {
+        console.log('调用了mounted钩子函数')
+    }
 })

@@ -26,7 +26,7 @@ module.exports = function (app) {
       console.log(e)
     })
 
-    // return res.send({name:'macj'});
+    // return res.send({data:200,data:{name:'macj'}});
   });
   app.use('/api', apiRoutes)
 };
