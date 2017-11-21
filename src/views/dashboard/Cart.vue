@@ -27,13 +27,9 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import ElRow from "element-ui/packages/row/src/row";
-  import ElCol from "element-ui/packages/col/src/col";
 
   export default {
-    components: {
-      ElCol,
-      ElRow},
+    components: {},
     computed: {
       ...mapGetters({
         products: 'cartProducts',

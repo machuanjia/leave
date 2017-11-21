@@ -11,6 +11,7 @@ module.exports = function (app) {
   }
 
   apiRoutes.post('/login', function (req, res) {
+    console.log(req.body);
     var url = baseUrl + '/users/login'
     axios.post(url).then((response) => {
       var ret = response.data

@@ -1,4 +1,9 @@
-export const CHANGE_LOCALE = 'CHANGE_LOCALE'
+export const LOAD_USER = 'LOAD_USER'
+export const ADD_USER = 'ADD_USER'
+export const DEL_USER = 'DEL_USER'
+
+
+
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const CHECKOUT_REQUEST = 'CHECKOUT_REQUEST'
 export const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS'
