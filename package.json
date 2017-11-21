@@ -1,8 +1,8 @@
 {
-  "name": "vue-hr",
+  "name": "leave",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "wangkai <walkerkay@163.com>",
+  "description": "leave",
+  "author": "",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -27,7 +27,13 @@
     "vue-i18n": "^7.3.2",
     "vue-lazyload": "^1.1.4",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5",
+    "ejs": "~2.5.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
