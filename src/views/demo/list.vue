@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <el-button @click='dialogVisible = true'>新增用户</el-button>
+            <el-button @click='handleCreate()'>新增用户</el-button>
         </div>
         <el-table
                 :data="users"
@@ -65,7 +65,9 @@
             return {
                 obj:{},
                 dialogVisible: false,
+                editFlag:false,
                 ruleForm: {
+                    id:'',
                     name: '',
                     addr: '',
                 },
@@ -98,27 +100,24 @@
             handleClose(done) {
                 this.$confirm('确认关闭？')
                     .then(_ => {
+                      this.dialogVisible = false;
+                      this.ruleForm = {};
                     })
-                    .catch(_ => {});
+                    .catch(_ => {
+                      this.dialogVisible = false;
+                      this.ruleForm = {};
+                    });
             },
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        alert('submit!');
-//                        this.$$api.user_add({
-//                            data: this.ruleForm,
-//                            fn: (data) => {
-//                                console.log(data);
-//                                console.log('登录成功');
-//                                this.$router.push({
-//                                    path: `/dashboard`
-//                                });
-//                            },
-//                            errFn: (err) => {
-//                                this.$message.error(err.msg)
-//                                this.login_status.disabled = false
-//                            }
-//                        })
+                      if(!this.editFlag){
+                        this.$store.dispatch('addUser', {name:this.ruleForm.name , addr:this.ruleForm.addr});
+                      }else{
+                        this.$store.dispatch('editUser', {id:this.ruleForm.id, name:this.ruleForm.name , addr:this.ruleForm.addr});
+                      }
+                      this.dialogVisible = false;
+                      this.ruleForm = {}
                     } else {
                         console.log('error submit!!');
                         return false;
@@ -127,6 +126,15 @@
             },
             resetForm(formName) {
                 this.$refs[formName].resetFields();
+            },
+            handleCreate(){
+              this.editFlag = false;
+              this.dialogVisible = true;
+            },
+            handleEdit(index,row){
+              this.editFlag = true;
+              this.ruleForm = this.$$_.cloneDeep(row);
+              this.dialogVisible = true;
             }
         },
         created(){
