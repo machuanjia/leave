@@ -2,21 +2,67 @@
   height: 100%;
   .nav-container{
     background: #2f323a;
+    width: 200px;
+    transition: width 0.3s;
+    &-collapsed{
+      width: 64px;
+    }
+
     .nav-header{
       background: #5294e0;
       color: #fff;
       line-height: 55px;
       vertical-align: middle;
-      font-size: 24px;
-
+      font-size: 20px;
+      padding: 0 10px;
+      .nav-logo{
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+      }
+      .nav-title{
+        color: #fff;
+      }
     }
     .nav-body{
       padding: 0;
+      .el-menu{
+        border-right: none;
+      }
     }
   }
   .main{
     .main-header{
       border-bottom: 1px solid #ddd;
+      padding: 0;
+      .header-container{
+        display: flex;
+        flex-direction: row;
+        .header-bread{
+          border-right: 1px solid #ddd;
+          padding: 20px;
+          cursor: pointer;
+          box-sizing: border-box;
+          height: 60px;
+          &:hover{
+            background: #f3f3f3;
+          }
+        }
+        .heander-content{
+          flex-grow: 1;
+        }
+        .heander-setting{
+          border-left: 1px solid #ddd;
+          padding: 20px;
+          cursor: pointer;
+          box-sizing: border-box;
+          height: 60px;
+        }
+        .heander-setting-items{
+          width: 120px;
+        }
+      }
+
     }
     .main-body{
       padding: 20px;

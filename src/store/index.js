@@ -5,6 +5,8 @@ import * as getters from './getters'
 import cart from './modules/cart'
 import products from './modules/products'
 import user from './modules/user'
+import appNav from './modules/nav'
+
 import createLogger from 'vuex/dist/logger'
 
 Vue.use(Vuex)
@@ -17,7 +19,8 @@ export default new Vuex.Store({
     modules: {
         cart,
         products,
-        user
+        user,
+        appNav
     },
     strict: debug,
     plugins: debug ? [createLogger()] : []
