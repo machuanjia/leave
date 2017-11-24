@@ -1,9 +1,15 @@
 .app-container{
   height: 100%;
+  position: relative;
   .nav-container{
     background: #2f323a;
     width: 200px;
+    height: 100%;
     transition: width 0.3s;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 9999;
     &-collapsed{
       width: 64px;
     }
@@ -26,12 +32,39 @@
     }
     .nav-body{
       padding: 0;
+
       .el-menu{
         border-right: none;
+      }
+      .el-submenu__title{
+        color:#fff;
+        i{
+          vertical-align: baseline;
+          margin-right: 10px;
+        }
+      }
+      .nav-collapse{
+        background: #2f323a;
+
+        .submenu{
+          background: #2f323a;
+          .el-menu-item{
+            color: #fff;
+            &:hover{
+              background: #454954;
+              color: #fff;
+            }
+          }
+        }
       }
     }
   }
   .main{
+    margin-left: 200px;
+    transition: margin-left 0.3s;
+    &.main-collapsed{
+      margin-left: 64px;
+    }
     .main-header{
       border-bottom: 1px solid #ddd;
       padding: 0;
