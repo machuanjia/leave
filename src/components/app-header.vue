@@ -28,12 +28,18 @@
     }),
     methods: {
       changeLocale(locale) {
+//        this.$i18n.locale = locale
+       // this.AppLanguage(locale)
+
         this.$i18n.locale = locale
+        window.localStorage.setItem('language', locale)
+        window.location.href = window.location
+
       },
       toggleCollapse(){
         this.$store.dispatch('toggleCollapse',{
           isCollapse:!this.isCollapse
-        });
+        })
       },
       handleDashBoard(command){
         if(command === 'logout'){

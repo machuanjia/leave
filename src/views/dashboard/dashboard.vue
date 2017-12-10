@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h1>Shopping Cart Example</h1>
-    <hr>
-    <h2>Products</h2>
+    <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>示例</el-breadcrumb-item>
+      <el-breadcrumb-item>面板</el-breadcrumb-item>
+    </el-breadcrumb>
     <product-list></product-list>
-    <hr>
     <cart></cart>
   </div>
 </template>

@@ -21,7 +21,7 @@ new Vue({
   components: {App},
   i18n,
     beforeCreate: function () {
-        this.$i18n.locale = 'en-us'
+        // this.$i18n.locale = 'en-us'
     },
     created: function () {
         console.log('调用了created钩子函数')

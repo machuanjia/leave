@@ -3,34 +3,9 @@
         <el-header class="nav-header">
             <!--LOGO "{{ www }}"-->
             <img src="../assets/image/logo.png" class="nav-logo"/>
-            <span class="nav-title" v-if="!isCollapse">云际天创</span>
+            <span class="nav-title" v-if="!isCollapse">{{$t('logo.title')}}</span>
         </el-header>
         <div class="nav-body">
-            <!--<el-menu-->
-            <!--default-active="1-1"-->
-            <!--background-color="#2f323a"-->
-            <!--text-color="#fff"-->
-            <!--active-text-color="#ffd04b"-->
-            <!--:default-active="$route.path"-->
-            <!--router-->
-            <!--class="el-menu-vertical-demo"-->
-            <!--@open="handleOpen"-->
-            <!--@close="handleClose"-->
-            <!--unique-opened-->
-            <!--v-show="!isCollapse">-->
-            <!--<el-submenu index="1">-->
-            <!--<template slot="title">-->
-            <!--<i class="el-icon-location"></i>-->
-            <!--<span slot="title">{{$t('nav.group_one')}}</span>-->
-            <!--</template>-->
-            <!--<el-menu-item-group>-->
-            <!--&lt;!&ndash;<span slot="title">分组一</span>&ndash;&gt;-->
-            <!--<el-menu-item index="/dashboard">{{$t('nav.dashboard')}}</el-menu-item>-->
-            <!--<el-menu-item index="/demo">{{$t('nav.demo')}}</el-menu-item>-->
-            <!--</el-menu-item-group>-->
-            <!--</el-submenu>-->
-            <!--</el-menu>-->
-
 
             <el-menu :default-active="$route.path" @open="handleopen" @close="handleclose"
                      style="width: 100%"
@@ -90,14 +65,14 @@
     data(){
       return {
         menus:[{
-          name:'导航',
+          name:this.$t('nav.group_one'),
           iconCls:'fa fa-tachometer',
           children:[{
-            name:'dashboard',
+            name:this.$t('nav.dashboard'),
             path:'/dashboard',
             iconCls:'fa fa-tachometer'
           },{
-            name:'demo',
+            name:this.$t('nav.demo'),
             path:'/demo',
             iconCls:'fa fa-tachometer'
           }]
@@ -111,10 +86,10 @@
     },
     methods: {
       handleopen(key, keyPath) {
-        console.log(key, keyPath);
+        console.log(key, keyPath)
       },
       handleclose(key, keyPath) {
-        console.log(key, keyPath);
+        console.log(key, keyPath)
       },
       handleselect(){
 
